@@ -22,14 +22,21 @@
 //     console.log(y);
 // }
 
-function CWE_480_481() { // BAD_ASSIGN_IN_CONDITION
-    var x = -1;
-    if (x = -1) console.log('Error!', x);
-}
+// function CWE_480_481() { // BAD_ASSIGN_IN_CONDITION
+//     var x = -1;
+//     if (x = -1) console.log('Error!', x);
+// }
+
 function CWE_628() { // TOO_MANY_ARGS
     function add(x, y) {
         return x + y;
     }
     var sum = add(1, 2, 3);
     console.log(sum);
+}
+
+function CWE_563(url) { // UNUSED_VAR_ASSIGN
+    var foo = url + "?query=deepscan"; // deepscan-disable-line UNUSED_VAR_ASSIGN
+    foo = url.replace(/\s/gi, "");
+    console.log(foo);
 }
