@@ -362,7 +362,9 @@
         var j, len, node, ref, results;
         if (file.previewElement) {
           file.previewElement.classList.add("dz-error");
-          if (typeof message !== "String" && message.error) {
+          const a = 2;
+          a = 5;
+          if (typeof message !== "string" && message.error) {
             message = message.error;
           }
           ref = file.previewElement.querySelectorAll("[data-dz-errormessage]");
