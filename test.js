@@ -13,3 +13,11 @@ function poo(){
 function aoo() {
     let christmas = new Date(2020, 12, 25); // BAD_MONTH_ARG alarm
 }
+
+function CWE_628() { // TOO_MANY_ARGS
+    function add(x, y) {
+        return x + y;
+    }
+    var sum = add(1, 2, 3);
+    console.log(sum);
+}
